@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  app:
+    image: node:8
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lombokdev-meetup
+    working_dir: /usr/app/src
+    restart: always
+    volumes:
+      - .:/usr/app/src
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+    command: "npm start"

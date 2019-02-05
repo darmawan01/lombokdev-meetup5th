@@ -12,14 +12,22 @@
 
     -> `this command will show all of your running image`
     -> `by adding -a that's mean your command will showing all of your image`
-    
-    docker image container ls
+        
+```
 
-    docker image container ls -a
+```
+    docker container ls
+
+    docker container ls -a
 
     -> `this command will show all of your running container` 
     -> `by adding -a that's mean your command will showing all of your container`
-        
+```
+
+```
+    docker container stop `container_id/container_name` 
+
+    -> `change `container_id/container_name` with your container id or name. this command will stop your container` 
 ```
 
 ```
@@ -34,8 +42,13 @@
 ```
 
 ```
-    docker run -it --name ldev -p 4000:4000 ldev/dockerize
+    docker run -it -d --name ldev -p 4000:4000 ldev/dockerize
   
     -> `by adding -d, that's mean your container will ne running on background`
+```
+```
+    docker-compose up -d
+  
+    -> `this command will build, createing your image/container and running your app. by adding -d, that's mean your container will ne running on background`
 ```
 
